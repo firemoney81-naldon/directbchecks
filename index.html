@@ -1,23 +1,772 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+    <!-- JSON-LD Structured Data for SEO and AI Crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://direct-compare.reliabledone.com/palisade"
+      },
+      "headline": "더 올 뉴 팰리세이드 보험료: 2026년 최저가 비교 및 연령별 평균 비용 가이드",
+      "description": "2026년형 현대 더 올 뉴 팰리세이드(LX3) 2.5T 가솔린 및 하이브리드 모델의 연령별 평균 보험료, 취등록세, 자동차세, 다이렉트 할인 팁을 상세히 분석합니다.",
+      "image": "https://images.unsplash.com/photo-1617788138017-80ad40651399",
+      "author": {
+        "@type": "Organization",
+        "name": "팰리세이드 보험료 분석 센터"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "팰리세이드 보험료 분석 센터",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://direct-compare.reliabledone.com/logo.png"
+        }
+      },
+      "datePublished": "2026-08-04",
+      "dateModified": "2026-08-04"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "더 올 뉴 팰리세이드의 20대 평균 보험료는 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "운전 경력이 짧은 만 26세 미만 20대의 경우, 더 올 뉴 팰리세이드 평균 보험료는 약 150만 원에서 230만 원 사이로 책정됩니다. 가족 한정 특약이나 다이렉트 가입을 통해 가격을 낮출 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "2.5 터보 하이브리드 모델과 가솔린 모델의 보험료 차이점은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "하이브리드 모델은 배터리 및 고가 전장 부품으로 인해 차량가액이 높게 책정되어 자기차량손해(자차) 담보 요금이 약 5퍼센트에서 10퍼센트 높게 발생할 수 있습니다. 그러나 우수한 연비로 인한 마일리지 특약 환급률이 높다는 장단점이 공존합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "자동차보험료를 가장 효과적으로 절약하는 방법은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "설계사 수수료가 없는 인터넷 다이렉트 사이트를 이용하고, 티맵 안전운전 점수 할인 및 마일리지 주행거리 특약을 신청하는 것이 제일 저렴한곳을 찾아 가입하는 방법입니다."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif; 
+            line-height: 1.8; 
+            color: #1e293b; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f8fafc; 
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 30px auto; 
+            padding: 0 20px; 
+            box-sizing: border-box;
+        }
+        header { 
+            background: linear-gradient(135deg, #0f766e, #115e59); 
+            color: #ffffff; 
+            padding: 45px 20px; 
+            text-align: center; 
+            border-radius: 12px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 2.3rem; 
+            font-weight: 800; 
+            letter-spacing: -1px; 
+        }
+        header p { 
+            margin: 15px 0 0 0; 
+            font-size: 1.1rem; 
+            opacity: 0.9; 
+        }
+        nav { 
+            background-color: #ffffff; 
+            border-radius: 8px; 
+            margin-bottom: 30px; 
+            border: 1px solid #e2e8f0; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        nav ul { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-around; 
+        }
+        nav ul li a { 
+            display: block; 
+            padding: 15px 20px; 
+            text-decoration: none; 
+            color: #0f766e; 
+            font-weight: 600; 
+            transition: all 0.2s ease; 
+        }
+        nav ul li a:hover { 
+            background-color: #f0fdfa; 
+            color: #0d9488; 
+        }
+        .content-wrap { 
+            display: flex; 
+            gap: 30px; 
+        }
+        .sidebar { 
+            flex: 1; 
+            min-width: 320px; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            padding: 24px; 
+            border: 1px solid #e2e8f0; 
+            align-self: flex-start; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .main-content { 
+            flex: 3; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            padding: 40px; 
+            border: 1px solid #e2e8f0; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        h2 { 
+            color: #0f766e; 
+            border-bottom: 3px solid #0f766e; 
+            padding-bottom: 12px; 
+            margin-top: 40px; 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+        }
+        h2:first-of-type { 
+            margin-top: 0; 
+        }
+        h3 { 
+            color: #0d9488; 
+            margin-top: 30px; 
+            font-size: 1.4rem; 
+            border-left: 5px solid #0d9488; 
+            padding-left: 15px; 
+        }
+        h4 { 
+            color: #0f766e; 
+            margin-top: 25px; 
+            font-size: 1.15rem; 
+            padding-bottom: 5px; 
+            border-bottom: 1px dotted #cbd5e1; 
+        }
+        p { 
+            margin-top: 0; 
+            margin-bottom: 20px; 
+            text-align: justify; 
+        }
+        .highlight-box { 
+            background-color: #f0fdfa; 
+            padding: 22px; 
+            border-radius: 8px; 
+            border-left: 6px solid #0f766e; 
+            margin: 25px 0; 
+            line-height: 1.8; 
+        }
+        .highlight-box strong { 
+            color: #115e59; 
+        }
+        .warning-box {
+            background-color: #fffbeb;
+            padding: 22px;
+            border-radius: 8px;
+            border-left: 6px solid #d97706;
+            margin: 25px 0;
+            line-height: 1.8;
+        }
+        .warning-box strong {
+            color: #b45309;
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 25px 0; 
+            background-color: #ffffff; 
+            border: 1px solid #cbd5e1; 
+            font-size: 0.95rem;
+        }
+        table th, table td { 
+            padding: 14px; 
+            text-align: center; 
+            border: 1px solid #cbd5e1; 
+        }
+        table th { 
+            background-color: #0f766e; 
+            color: #ffffff; 
+            font-weight: 600; 
+        }
+        table tr:nth-child(even) { 
+            background-color: #f8fafc; 
+        }
+        .form-section { 
+            background-color: #f1f5f9; 
+            border: 1px solid #cbd5e1; 
+            padding: 24px; 
+            border-radius: 8px; 
+            margin: 25px 0; 
+        }
+        .form-section h3 {
+            margin-top: 0;
+            border-left: none;
+            padding-left: 0;
+            color: #1e293b;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 8px;
+        }
+        .form-section label { 
+            display: block; 
+            margin-top: 15px; 
+            font-weight: 600; 
+            color: #334155; 
+            font-size: 0.9rem;
+        }
+        .form-section input[type="text"], 
+        .form-section input[type="number"], 
+        .form-section select, 
+        .form-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+        .form-section input:focus, 
+        .form-section select:focus, 
+        .form-section textarea:focus {
+            border-color: #0f766e;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+        }
+        .checkbox-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: normal;
+            font-size: 0.9rem;
+            color: #475569;
+            cursor: pointer;
+        }
+        .checkbox-label input {
+            cursor: pointer;
+        }
+        .submit-btn { 
+            background-color: #0f766e; 
+            color: white; 
+            padding: 12px 25px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 1rem; 
+            font-weight: 600;
+            margin-top: 20px; 
+            width: 100%;
+            transition: background-color 0.2s; 
+        }
+        .submit-btn:hover { 
+            background-color: #115e59; 
+        }
+        .secondary-btn {
+            background-color: #d97706;
+        }
+        .secondary-btn:hover {
+            background-color: #b45309;
+        }
+        .result-box {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f0fdfa;
+            border: 1px solid #5eead4;
+            border-radius: 6px;
+            font-weight: 700;
+            color: #0f766e;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        .chart-placeholder { 
+            text-align: center; 
+            margin: 30px 0; 
+            padding: 40px 20px; 
+            background-color: #f0fdfa; 
+            border: 2px dashed #5eead4; 
+            border-radius: 8px; 
+            color: #0f766e; 
+            font-style: italic; 
+        }
+        .external-links ul { 
+            list-style: none; 
+            padding-left: 0; 
+        }
+        .external-links li { 
+            margin-bottom: 12px; 
+            padding-left: 15px;
+            border-left: 3px solid #0f766e;
+        }
+        .external-links a { 
+            color: #0f766e; 
+            text-decoration: none; 
+            font-weight: 600; 
+        }
+        .external-links a:hover { 
+            text-decoration: underline; 
+            color: #115e59; 
+        }
+        @media (max-width: 992px) {
+            .content-wrap { flex-direction: column; }
+            .sidebar { min-width: 100%; }
+            header { padding: 30px 15px; }
+            header h1 { font-size: 1.8rem; }
+            .main-content { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>더 올 뉴 팰리세이드 보험료: 2026년 최신 비교 견적 및 유지비 절약 전략</h1>
+            <p>신형 팰리세이드 LX3 가솔린 및 하이브리드 모델의 연령별 평균 가격 분석과 최저가 설계 비법</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul class="main-menu">
+                <li><a href="#calc_basis">보험료 산출 기준</a></li>
+                <li><a href="#age_averages">연령별 평균 요금</a></li>
+                <li><a href="#discount_tips">다이렉트 할인 방법</a></li>
+                <li><a href="#maintenance_sim">유지비 시뮬레이터</a></li>
+                <li><a href="#community_reviews">오너 실사용 후기</a></li>
+                <li><a href="#expert_consult">맞춤형 컨설팅 신청</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-wrap">
+            
+            <div class="sidebar">
+                <h2>실시간 모의 계산기</h2>
+                <div class="form-section">
+                    <h3>내 팰리세이드 보험료 예측</h3>
+                    <form id="insuranceForm">
+                        <label for="car_model">상세 모델 선택</label>
+                        <select id="car_model" required>
+                            <option value="">선택해 주세요</option>
+                            <option value="2.5t_gasoline">2.5T 가솔린 (LX3)</option>
+                            <option value="2.5t_hybrid">2.5T 하이브리드 (LX3)</option>
+                            <option value="3.5_gasoline">3.5 V6 가솔린 (LX3)</option>
+                        </select>
+                        
+                        <label for="driver_age">운전자 연령</label>
+                        <select id="driver_age" required>
+                            <option value="">선택해 주세요</option>
+                            <option value="under26">만 26세 미만 (초보)</option>
+                            <option value="26to30">만 26세 이상 ~ 만 30세 미만</option>
+                            <option value="31to40">만 30대 (가장 보편적)</option>
+                            <option value="41to50">만 40대</option>
+                            <option value="over50">만 50대 이상</option>
+                        </select>
+
+                        <label for="experience">운전 경력</label>
+                        <select id="experience" required>
+                            <option value="">선택해 주세요</option>
+                            <option value="under3">3년 미만 (최초 가입 포함)</option>
+                            <option value="3to10">3년 이상 ~ 10년 미만</option>
+                            <option value="over10">10년 이상 베테랑</option>
+                        </select>
+
+                        <label for="accident">최근 3년 내 사고 이력</label>
+                        <select id="accident" required>
+                            <option value="none">무사고</option>
+                            <option value="one">1회 사고</option>
+                            <option value="multiple">2회 이상 사고</option>
+                        </select>
+
+                        <label>적용 가능한 추가 할인 종류</label>
+                        <div class="checkbox-container">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="dc_mileage"> 마일리지 주행거리 특약 (연 1만km 이하)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="dc_blackbox"> 블랙박스 장착 할인
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="dc_child"> 만 6세 이하 자녀 할인
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="dc_tmap"> 티맵 안전운전 점수 특약 (70점 이상)
+                            </label>
+                        </div>
+                        
+                        <button type="button" class="submit-btn" onclick="calculateInsurance()">예측 결과 산출하기</button>
+                    </form>
+                    <div id="insurance_result" class="result-box" style="display:none;"></div>
+                </div>
+                
+                <h3>자주 찾는 연관 정보</h3>
+                <ul class="sub-menu" style="padding-left: 15px; line-height: 2;">
+                    <li><a href="#calc_basis" style="color: #0f766e; text-decoration: none;">신형 팰리세이드 부품 단가 및 자차 요율</a></li>
+                    <li><a href="#age_averages" style="color: #0f766e; text-decoration: none;">20대와 40대의 보험료 편차 원인</a></li>
+                    <li><a href="#discount_tips" style="color: #0f766e; text-decoration: none;">티맵 어플 및 카카오톡 연동 할인 방법</a></li>
+                    <li><a href="#maintenance_sim" style="color: #0f766e; text-decoration: none;">가솔린 대 하이브리드 세금 차이점</a></li>
+                    <li><a href="#community_reviews" style="color: #0f766e; text-decoration: none;">디시 및 보배드림 실제 가입 후기</a></li>
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <h2>더 올 뉴 팰리세이드 보험료: 최저가 설계를 위한 2026년 분석 보고서</h2>
+
+                <div class="highlight-box">
+                    <strong>더 올 뉴 팰리세이드 보험료</strong>는 차량의 사양(2.5T 가솔린, 2.5T 하이브리드 LX3), 가입 운전자의 나이, 무사고 경력 여부, 그리고 온라인 다이렉트 특약 가입 설계에 따라 연간 <strong>최대 100만 원 이상</strong>의 비용 편차가 발생할 수 있습니다. 본 심층 보고서는 2026년 기준 변경된 세제 혜택과 보험 요율 기준을 적용하여, 패밀리 대형 SUV 구매자가 지출하는 고정 비용을 가장 효과적으로 줄일 수 있는 전문적인 컨설팅 가이드를 제시합니다.
+                </div>
+
+                <h3 id="calc_basis">1. 더 올 뉴 팰리세이드 보험료 산출의 핵심 기준 및 모델 특징</h3>
+                <p>
+                    현대자동차의 플래그십 대형 SUV인 <strong>더 올 뉴 팰리세이드 (코드명 LX3)</strong>는 패밀리카 세그먼트에서 독보적인 순위를 차지하고 있습니다. 대형 차체와 무거운 공차 중량을 지녔기 때문에 사고 시 물적, 인적 손해 규모가 준중형 차량에 비해 상대적으로 크게 잡힙니다. 이로 인해 기본적인 대인 배상 및 대물 배상 기본 요율이 다소 높게 책정되는 특징을 보입니다.
+                </p>
+                
+                <h4>1.1. 차량가액과 자기차량손해(자차) 담보의 관계</h4>
+                <p>
+                    보험 가격 산출 시 가장 큰 비중을 차지하는 부분 중 하나는 바로 자기차량손해, 즉 자차 담보 금액입니다. 자차 요금은 전적으로 보험 가입 시점의 차량 가격(차량가액)을 기준으로 계산됩니다. 2026년형 더 올 뉴 팰리세이드는 최첨단 빌트인캠, ccNC 인포테인먼트 시스템, 듀얼 챔버 에어 서스펜션 등 고가의 부품 조합이 대거 탑재되어 이전 1세대 모델 대비 차량가액이 상승했습니다. 
+                </p>
+                <p>
+                    특히 친환경 브랜드 시장에서 이목을 집중시킨 <strong>2.5T 하이브리드</strong> 모델은 배터리 셀 시스템과 구동 모터 등 핵심 전장 장치의 탑재로 인해 일반 가솔린 모델 대비 신차 가격이 약 400만 원에서 600만 원가량 높습니다. 이로 인해 하이브리드 모델의 초기 자차 비용은 가솔린 대비 약 10퍼센트가량 높게 산정되는 장단점이 있습니다. 반면 고전압 배터리를 보호하는 전용 특약 등에 가입하는 방법으로 수리 시의 리스크를 줄일 수 있습니다.
+                </p>
+
+                <h4>1.2. 9인승 모델의 보험 요율 차이점 및 장점</h4>
+                <p>
+                    더 올 뉴 팰리세이드 LX3에서 새롭게 주목받는 9인승 트림은 일반 7인승, 8인승 모델과 달리 개별소비세 면제 혜택을 제공합니다. 세법상 세제 혜택과 더불어 고속도로 버스전용차로 진입(6인 이상 탑승 시)이 가능하다는 압도적인 장점이 있어 개인 사업자뿐만 아니라 다자녀 가정에서도 추천 빈도가 높습니다. 
+                </p>
+                <p>
+                    이러한 9인승 모델은 다이렉트 견적 조회 시 보험 요율 등급 분류에서도 미세한 차이를 보입니다. 다자녀 가정의 경우 자녀 할인 혜택 폭이 더욱 크며, 법인이나 개인 사업자가 신규 비즈니스 업무용으로 등록할 경우 임직원 한정 운전 특약을 적용하여 세무 비용 처리와 보험 요금을 동시에 최적화하는 컨설팅이 활발히 활용되고 있습니다.
+                </p>
+
+                <h3 id="age_averages">2. 운전자 연령대별 평균 보험료 분석</h3>
+                <p>
+                    차량이 동일하더라도 운전자의 나이가 얼마인지에 따라 납부해야 하는 총액은 전혀 다르게 결정됩니다. 통계청과 보험개발원의 사고 발생 통계 지표에 기초하여 각 손해율이 다르게 연동되기 때문입니다. 2026년 최신 손해율 추이를 반영한 연령별 예상 평균 가격표는 다음과 같습니다.
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>가입자 유형 구분</th>
+                            <th>운전자 연령 범위</th>
+                            <th>할인할증 기준등급</th>
+                            <th>2.5T 가솔린 (연간 평균)</th>
+                            <th>2.5T 하이브리드 (연간 평균)</th>
+                            <th>추천 및 권장 사항</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>대학생 및 사회초년생 (신규)</td>
+                            <td>만 21세 이상 ~ 만 26세 미만</td>
+                            <td>11Z (최초 가입 기준)</td>
+                            <td>약 1,950,000 원</td>
+                            <td>약 2,150,000 원</td>
+                            <td>부모님 명의 지분 공유 방식 권장</td>
+                        </tr>
+                        <tr>
+                            <td>30대 직장인 (평균 무사고)</td>
+                            <td>만 31세 이상 ~ 만 35세 미만</td>
+                            <td>14P (경력 약 5년)</td>
+                            <td>약 980,000 원</td>
+                            <td>약 1,080,000 원</td>
+                            <td>부부 한정 및 T-Map 할인 결합</td>
+                        </tr>
+                        <tr>
+                            <td>40대 가장 (자녀 포함)</td>
+                            <td>만 43세 이상 ~ 만 48세 미만</td>
+                            <td>18P (장기 무사고)</td>
+                            <td>약 680,000 원</td>
+                            <td>약 750,000 원</td>
+                            <td>자녀 특약 및 1인 한정 최적화</td>
+                        </tr>
+                        <tr>
+                            <td>50대 베테랑 운전자</td>
+                            <td>만 51세 이상 ~ 만 55세 미만</td>
+                            <td>21P (우수 경력)</td>
+                            <td>약 590,000 원</td>
+                            <td>약 640,000 원</td>
+                            <td>마일리지 선할인 적극 반영</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="warning-box">
+                    <strong>사회초년생 첫차 가입 시 주의사항:</strong> 만 26세 미만의 젊은 연령대에서 더 올 뉴 팰리세이드를 단독 명의로 신규 가입할 경우, 높은 사고 손해율 통계치로 인해 예상 요금 금액이 200만 원을 초과할 수 있습니다. 이 경우 단독 가입보다는 운전 경력이 풍부하고 무사고 할인 등급이 높은 부모님의 명의에 지분을 일부 공유(예: 부모님 99퍼센트, 본인 1퍼센트)한 후, 가족 한정 특약을 적용해 가입하는 방법이 가장 저렴한곳을 찾는 최고의 노하우가 됩니다.
+                </div>
+
+                <h3 id="discount_tips">3. 다이렉트 온라인 가입으로 보험료를 획기적으로 낮추는 10가지 방법</h3>
+                <p>
+                    대리점 설계사를 통한 오프라인 대면 계약은 약 15퍼센트에서 20퍼센트의 유통 수수료가 청구됩니다. 반면 컴퓨터나 스마트폰 어플을 통해 직접 사이트에 접속하는 <strong>인터넷 다이렉트</strong> 방식을 이용하면 중간 수수료가 완전히 제거되어 제일 저렴하고 합리적인 비용으로 동일한 보장 혜택을 챙길 수 있습니다. 아래의 10가지 특약 할인 비법을 하나씩 적용해 보시기 바랍니다.
+                </p>
+
+                <h4>3.1. 주행거리 연동 마일리지 특약 (최대 35% 할인)</h4>
+                <p>
+                    연간 차량 운행 거리가 비교적 짧은 주말 패밀리카 유저라면 마일리지 특약은 선택이 아닌 필수입니다. 가입할 때 최초 주행거리 계기판 사진을 모바일 앱으로 전송하고, 만기 시점에 한 번 더 등록하면 주행한 거리 구간에 따라 현금 지원 형태로 보험료를 계좌로 환급해 줍니다. 연간 3,000km 이하 주행 시 가장 큰 폭의 할인을 누릴 수 있으며, 1만km 이하 구간도 약 10퍼센트 이상의 할인이 보증됩니다.
+                </p>
+
+                <h4>3.2. 안전운전 습관 점수 연동 특약 (티맵, 카카오내비)</h4>
+                <p>
+                    네이버나 구글 플레이 스토어에서 내려받을 수 있는 스마트폰 내비게이션 어플(T-Map 또는 카카오내비)을 켜고 일정 거리(보통 1,000km 이상)를 주행하면서 급가속, 급감속을 하지 않아 안전운전 기준 점수(보통 70점 또는 80점 이상)를 달성하면 평균 10퍼센트 내외의 추가 감면 혜택을 즉시 지급합니다. 
+                </p>
+
+                <h4>3.3. 첨단 안전장치 장착 특약 (ADAS 기본 적용)</h4>
+                <p>
+                    더 올 뉴 팰리세이드 LX3 모델은 차로 유지 보조, 전방 충돌 방지 보조, 후측방 충돌 방지 시스템 등 최고 수준의 능동 안전 기술이 전 트림에 기본 장착되어 있습니다. 이러한 ADAS 장치 정보는 보험개발원 전산망을 통해 자동 조회되며, 차량 등급에 따라 추가적인 감면 혜택이 적용되므로 가입 시 특약 선택란에서 반드시 체크하여 누락되지 않도록 해야 합니다.
+                </p>
+
+                <h4>3.4. 블랙박스 상시 장착 할인</h4>
+                <p>
+                    사고 발생 시 원인 규명을 명확하게 돕는 블랙박스가 차량에 장착되어 있다면 자차 요금에서 일정 비율(약 3퍼센트에서 5퍼센트)의 감면이 자동 승인됩니다. 가입 과정에서 블랙박스가 장착된 전면 유리 사진과 메모리 카드 작동 사진을 온라인으로 업로드하면 됩니다.
+                </p>
+
+                <h4>3.5. 만 6세 이하 자녀 할인 (다자녀 우대)</h4>
+                <p>
+                    어린 자녀가 승차해 있는 패밀리카는 통계적으로 방어 운전을 할 확률이 현저히 높습니다. 만 6세 이하의 영유아 또는 태아가 있는 가정이 신청하면 최대 10퍼센트 이상의 우대 혜택을 부여합니다. 등본이나 가족관계증명서를 휴대폰 사진 촬영으로 증빙하면 쉽게 승인됩니다.
+                </p>
+
+                <div class="chart-placeholder">
+                    [ 시각 자료: 2026년형 팰리세이드 다이렉트 할인 특약 결합 시 연간 누적 절감액 추이 비교 그래프 ]
+                </div>
+
+                <h3 id="maintenance_sim">4. 더 올 뉴 팰리세이드 세금, 취등록세 및 유지비 종합 분석</h3>
+                <p>
+                    차량을 소유하면서 지출하게 되는 전체 금액을 예측하기 위해서는 단순히 보험 가격만 따져서는 곤란합니다. 지방세법상 배기량 기준의 자동차세와 지방세, 신차 등록 시 발생하는 취등록세를 종합적으로 검토해야 가계 지출 예산을 안정적으로 수립할 수 있습니다.
+                </p>
+                <p>
+                    과거 1세대 팰리세이드의 주력 엔진이었던 3.8 가솔린 모델은 높은 배기량으로 인해 매년 지불해야 하는 자동차세만 약 100만 원에 육박하여 큰 비용 부담을 주었습니다. 그러나 신형 <strong>2.5T 가솔린 및 하이브리드</strong> 모델은 배기량이 2,497cc로 낮아져 연간 세금이 지방 교육세 30퍼센트를 더하더라도 약 65만 원 선으로 대폭 절감되는 장점이 있습니다.
+                </p>
+
+                <div class="form-section">
+                    <h3>올 뉴 팰리세이드 연간 유지비 시뮬레이터</h3>
+                    <p>내 조건에 맞는 연간 실질 주행 세금 및 주유비를 직접 시뮬레이션해 보세요.</p>
+                    <form id="maintenanceForm">
+                        <label for="m_fuel_type">엔진 연료 종류</label>
+                        <select id="m_fuel_type" required>
+                            <option value="gasoline_2.5">2.5T 가솔린 (공인연비 약 9.5km/L)</option>
+                            <option value="hybrid">2.5T 하이브리드 (공인연비 약 13.5km/L)</option>
+                            <option value="gasoline_3.5">3.5 V6 가솔린 (공인연비 약 8.5km/L)</option>
+                        </select>
+                        
+                        <label for="m_annual_km">연간 목표 주행 거리 (km)</label>
+                        <input type="number" id="m_annual_km" placeholder="예: 15000" required>
+                        
+                        <label for="m_fuel_price">현재 리터당 유가 (원)</label>
+                        <input type="number" id="m_fuel_price" placeholder="예: 1650" required>
+
+                        <label for="m_insurance">연간 예상 보험료 (원)</label>
+                        <input type="number" id="m_insurance" placeholder="예: 850000" required>
+                        
+                        <button type="button" class="submit-btn secondary-btn" onclick="calculateMaintenance()">종합 유지비 시뮬레이션 실행</button>
+                    </form>
+                    
+                    <div id="m_results" style="display:none; margin-top:20px; padding:15px; background-color:#fffbeb; border:1px solid #fcd34d; border-radius:6px;">
+                        <p id="m_fuel_result" style="margin-bottom:8px; font-weight:600; color:#b45309;"></p>
+                        <p id="m_tax_result" style="margin-bottom:8px; font-weight:600; color:#b45309;"></p>
+                        <p id="m_total_annual" style="margin-bottom:8px; font-weight:bold; color:#1e293b; font-size:1.05rem;"></p>
+                        <p id="m_total_monthly" style="margin-bottom:0; font-weight:bold; color:#0f766e; font-size:1.1rem;"></p>
+                    </div>
+                </div>
+
+                <h3 id="community_reviews">5. 자동차 커뮤니티 실제 오너들의 내돈내산 후기 및 성지 정보</h3>
+                <p>
+                    자동차 전문 커뮤니티인 <strong>보배드림</strong>, <strong>디시인사이드 차갤</strong>, 그리고 <strong>에펨코리아(펨코)</strong> 차판 게시판 등에는 더 올 뉴 팰리세이드를 실제로 구매하여 운행 중인 오너들의 생생한 내돈내산 갱신 후기글이 활발하게 올라옵니다.
+                </p>
+                <p>
+                    많은 유저들이 공통적으로 언급하는 부분 중 하나는 신차 영업사원이 소개해 주는 조건보다 개인이 직접 모바일 어플을 활용해 온라인 다이렉트 보험사들을 상호 비교하는 편이 조건이 훨씬 우수하다는 점입니다. 일부 오너들은 신차 계약 시 대리점 성지 딜러로부터 블랙박스와 같은 사은품이나 일시불 캐시백 현금지원 혜택을 받고, 대신 보험 가입은 설계사 수수료가 배제된 다이렉트로 진행하여 전체 초기 구매 비용을 크게 세이브했다는 꿀팁 후기를 전수하고 있습니다.
+                </p>
+                <p>
+                    토스나 카카오톡과 같은 플랫폼 앱에서 종종 진행하는 자동차 보험 비교 이벤트 기회를 포착하여 가입 시 현금성 모바일 상품권을 선물로 받았다는 긍정적인 평가도 쉽게 접할 수 있습니다. 
+                </p>
+
+                <h3 id="insurance_vs_driver">6. 자동차보험 대 운전자보험의 명확한 차이점 및 추천 구성</h3>
+                <p>
+                    팰리세이드 패밀리 SUV 오너들이 가입을 진행할 때 반드시 명확히 구분해야 하는 두 가지 개념이 바로 민사 책임을 담보하는 자동차보험과 형사 책임을 보상하는 운전자보험의 차이점입니다.
+                </p>
+                <ul>
+                    <li><strong>자동차보험 (의무 가입 대상):</strong> 사고가 났을 때 남에게 입힌 신체적 상해 및 재물상의 손해(대물 5억 원에서 10억 원 권장), 그리고 내 차량의 파손 수리비(자차)를 보상하는 구조입니다. 대인배상 및 대물배상 한도를 넉넉히 설정하여 가입하는 것이 만일의 사태에 대처하는 현명한 방법입니다.</li>
+                    <li><strong>운전자보험 (선택 가입 대상):</strong> 도로교통법 위반에 따른 형사적 처벌 리스크(12대 중과실 사고 발생 시)에 처했을 때 벌금형 확정, 변호사 선임 비용 지출, 교통사고 합의금 발생 시의 형사적 구제 비용을 지원받는 상품입니다. 월 1만 원에서 2만 원 수준의 컴팩트한 요금제 형태로 추가 구성할 수 있습니다.</li>
+                </ul>
+
+                <h3 id="expert_consult">7. 전문가 1:1 맞춤형 무료 견적 요청 서비스</h3>
+                <p>
+                    최신 금융 AI 모델 알고리즘에 기반하여 더 올 뉴 팰리세이드 차주님께 딱 들어맞는 맞춤형 견적 제안을 제공합니다. 아래 양식에 가상의 정보를 채워 넣은 뒤 분석을 요청하시면 본인 연령대에 최적화된 우대 조건 경로를 빠르게 확인할 수 있습니다. (입력된 가상의 정보는 임시 브라우저 연산에만 사용되며 수집되지 않습니다.)
+                </p>
+                
+                <div class="form-section" style="background-color: #f0fdfa; border-color: #5eead4;">
+                    <h3 style="color:#0f766e;">팰리세이드 다이렉트 맞춤 컨설팅 요청서</h3>
+                    <form id="consultForm" onsubmit="event.preventDefault(); alert('맞춤형 견적 분석이 시작되었습니다. 등록하신 정보에 알맞은 온라인 최저가 안내 가이드를 생성합니다.');">
+                        <label for="cust_name">신청인 성함</label>
+                        <input type="text" id="cust_name" placeholder="홍길동" required>
+
+                        <label for="cust_phone">안내받으실 가상 연락처</label>
+                        <input type="text" id="cust_phone" placeholder="010-0000-0000" required>
+
+                        <label for="cust_trim">구입 예정 팰리세이드 사양 트림</label>
+                        <select id="cust_trim" required>
+                            <option value="">선택해 주세요</option>
+                            <option value="excl">익스클루시브 (기본형)</option>
+                            <option value="pres">프레스티지 (실용형)</option>
+                            <option value="calli">캘리그래피 (최고급형)</option>
+                            <option value="9seat">9인승 특화 모델</option>
+                        </select>
+
+                        <label for="cust_add_msg">추가 요청 사항 및 궁금한 점</label>
+                        <textarea id="cust_add_msg" rows="4" placeholder="예: 무사고 7년차 30대인데 자차 보장을 최대로 넣었을 때 예상 금액이 얼마인지 상세 비교를 원합니다."></textarea>
+
+                        <button type="submit" class="submit-btn" style="background-color: #0f766e;">1:1 맞춤 할인 분석 요청 및 진단 신청</button>
+                    </form>
+                </div>
+
+                <h3 id="policy_change">8. 2026년 신규 자동차 보험 정책 변화 및 전망</h3>
+                <p>
+                    2026년도 자동차 금융 시장에서는 안전운전 점수 특약의 기본 할인율 범위가 큰 폭으로 개정되었습니다. 현대자동차의 최신 팰리세이드 모델처럼 첨단 능동형 보조 시스템(HDA2, 원격 스마트 주차 보조 등)이 장착된 정밀한 차량들은 자율 주행 연계도가 높은 것으로 판정되어 기존 대비 약 3퍼센트의 선제적 요금제 우대 혜택을 추가로 제공받는 법적 근거가 정착되었습니다.
+                </p>
+                <p>
+                    따라서 다이렉트 신규 가입 프로세스를 시작하기 전에 본인의 무사고 경력이 제대로 전산에 반영되었는지를 확실히 조회하고, 운전 중 휴대폰 사용 차단 상태 등 연동 가능한 모든 스마트 할인 방법을 수렴하여 신청하는 자가 관리 습관이 대단히 중요해졌습니다.
+                </p>
+
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 40px 0;">
+
+                <div class="external-links">
+                    <h3 id="external">9. 공신력 있는 공식 외부 정보 및 신뢰 기반 참고 사이트</h3>
+                    <p>더 올 뉴 팰리세이드 보험료 계산 및 차량 기본 등록 절차, 세무 혜택에 관한 추가적인 공인 정보는 아래 공식 플랫폼 채널을 통하여 투명하게 확인하실 수 있습니다.</p>
+                    <ul>
+                        <li><a href="https://directbcheckt.reliabledone.com" target="_blank">다이렉트 비교 견적 데이터 정보관 (reliabledone.com)</a></li>
+                        <li><a href="https://namu.wiki/w/%ED%98%84%EB%8C%80%20%ED%8C%B0%EB%A6%AC%EC%84%B8%EC%9D%B4%EB%93%9C" target="_blank">나무위키: 현대 팰리세이드 백과사전 상세 기술 명세</a></li>
+                        <li><a href="https://www.hyundai.com/kr/ko/e/vehicles/palisade/intro" target="_blank">현대자동차 공식 브랜드 홈페이지: 신형 팰리세이드 가격표 및 카탈로그 안내</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Insurance Premium Estimator Function
+        function calculateInsurance() {
+            const carModel = document.getElementById("car_model").value;
+            const driverAge = document.getElementById("driver_age").value;
+            const experience = document.getElementById("experience").value;
+            const accident = document.getElementById("accident").value;
+
+            if (!carModel || !driverAge || !experience || !accident) {
+                alert("예측 결과를 원활하게 도출하기 위해 모든 필수 드롭다운 항목을 누락 없이 선택해 주시기 바랍니다.");
+                return;
+            }
+
+            // Base premium model depending on age
+            let basePremium = 850000;
+            if (driverAge === "under26") basePremium = 1950000;
+            else if (driverAge === "26to30") basePremium = 1350000;
+            else if (driverAge === "31to40") basePremium = 880000;
+            else if (driverAge === "41to50") basePremium = 740000;
+            else if (driverAge === "over50") basePremium = 660000;
+
+            // Model factor multiplier
+            let modelFactor = 1.0;
+            if (carModel === "2.5t_hybrid") modelFactor = 1.1; // Hybrid vehicle value is higher
+            else if (carModel === "2.5t_gasoline") modelFactor = 1.0;
+            else if (carModel === "3.5_gasoline") modelFactor = 1.05;
+
+            // Experience multiplier
+            let expFactor = 1.0;
+            if (experience === "under3") expFactor = 1.35;
+            else if (experience === "3to10") expFactor = 1.0;
+            else if (experience === "over10") expFactor = 0.85;
+
+            // Accident history multiplier
+            let accidentFactor = 1.0;
+            if (accident === "none") accidentFactor = 1.0;
+            else if (accident === "one") accidentFactor = 1.25;
+            else if (accident === "multiple") accidentFactor = 1.65;
+
+            // Checked discount elements (multiplicative)
+            let discountMultiplier = 1.0;
+            if (document.getElementById("dc_mileage").checked) discountMultiplier *= 0.85; // 15% off
+            if (document.getElementById("dc_blackbox").checked) discountMultiplier *= 0.96; // 4% off
+            if (document.getElementById("dc_child").checked) discountMultiplier *= 0.91; // 9% off
+            if (document.getElementById("dc_tmap").checked) discountMultiplier *= 0.91; // 9% off
+
+            // Final Calculation
+            const finalPremium = Math.round(basePremium * modelFactor * expFactor * accidentFactor * discountMultiplier);
+            
+            const resultBox = document.getElementById("insurance_result");
+            resultBox.style.display = "block";
+            resultBox.innerText = "연간 산출 예상 금액: 약 " + finalPremium.toLocaleString() + " 원 (선택 특약 및 할인 반영 결과)";
+            
+            // Auto fill insurance amount to the maintenance simulator for smooth user experience
+            document.getElementById("m_insurance").value = finalPremium;
+        }
+
+        // 2. Annual Maintenance Cost Calculator Function
+        function calculateMaintenance() {
+            const fuelType = document.getElementById("m_fuel_type").value;
+            const annualKm = parseFloat(document.getElementById("m_annual_km").value);
+            const fuelPrice = parseFloat(document.getElementById("m_fuel_price").value);
+            const insurance = parseFloat(document.getElementById("m_insurance").value);
+
+            if (!fuelType || isNaN(annualKm) || isNaN(fuelPrice) || isNaN(insurance)) {
+                alert("종합 유지비 시뮬레이션 산출을 진행하려면 연간 주행 거리, 연료 시세, 예상 보험료 항목이 올바른 숫자로 채워져야 합니다.");
+                return;
+            }
+
+            // Approximate fuel efficiency in km/L
+            let economy = 9.5;
+            let baseTax = 650000; // Tax for 2.5T engines in KRW
+            
+            if (fuelType === "hybrid") {
+                economy = 13.5;
+                baseTax = 650000; // Same 2.5T displacement but with a general eco discount assumption
+            } else if (fuelType === "gasoline_2.5") {
+                economy = 9.5;
+                baseTax = 650000;
+            } else if (fuelType === "gasoline_3.5") {
+                economy = 8.5;
+                baseTax = 900000; // Higher displacement (3,470cc)
+            }
+
+            // Annual fuel cost math
+            const fuelCost = Math.round((annualKm / economy) * fuelPrice);
+            const totalAnnual = fuelCost + baseTax + insurance;
+            const totalMonthly = Math.round(totalAnnual / 12);
+
+            document.getElementById("m_fuel_result").innerText = "연간 예상 주유 연료비: 약 " + fuelCost.toLocaleString() + " 원";
+            document.getElementById("m_tax_result").innerText = "연간 자동차세 (지방 교육세 30% 합산): 약 " + baseTax.toLocaleString() + " 원";
+            document.getElementById("m_total_annual").innerText = "연간 차량 고정 유지 지출: 약 " + totalAnnual.toLocaleString() + " 원";
+            document.getElementById("m_total_monthly").innerText = "월평균 예상 유지 비용: 약 " + totalMonthly.toLocaleString() + " 원";
+            
+            document.getElementById("m_results").style.display = "block";
+        }
+    </script>
+  
